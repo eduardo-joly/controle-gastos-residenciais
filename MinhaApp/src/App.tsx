@@ -27,7 +27,7 @@ interface Transacao {
 function App(){
 
 
-const api="http://localhost:5142/api";
+const api = import.meta.env.VITE_API_URL || "http://localhost:5142/api";
 
 
 const [pessoas,setPessoas]=useState<Pessoa[]>([]);
