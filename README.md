@@ -5,6 +5,7 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
 [![SQLite](https://img.shields.io/badge/SQLite-3-lightgrey?style=for-the-badge&logo=sqlite)](https://www.sqlite.org/)
 [![Deploy Vercel](https://img.shields.io/badge/Deploy-Vercel-success?style=for-the-badge&logo=vercel)](https://controle-gastos-residenciais-ruddy.vercel.app)
+[![API Railway](https://img.shields.io/badge/API-Railway-blue?style=for-the-badge&logo=railway)](https://controle-gastos-residenciais-production.up.railway.app/swagger/index.html)
 
 Um sistema completo de controle financeiro residencial projetado para simplificar a gestão de receitas e despesas familiares. O projeto foi desenvolvido com uma arquitetura moderna dividida em uma API robusta no backend e uma aplicação rica e interativa no frontend.
 
