@@ -35,16 +35,20 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+// Executa as migrações do banco de dados na inicialização do contêiner
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+    dbContext.Database.Migrate();
+}
 
 
 app.UseCors("React");
 
 
-if(app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+// Habilita o Swagger em qualquer ambiente para que os recrutadores possam testar os endpoints
+app.UseSwagger();
+app.UseSwaggerUI();
 
 
 app.MapControllers();
