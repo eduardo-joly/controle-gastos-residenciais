@@ -19,8 +19,9 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 
-# Configura a porta do ASP.NET Core para rodar na porta 8080 (padrão que o Render escuta)
-ENV ASPNETCORE_URLS=http://+:8080
-EXPOSE 8080
+# Configura a porta do ASP.NET Core para usar a variável PORT do Railway (padrão: 8080)
+ENV PORT=8080
+ENV ASPNETCORE_URLS=http://+:${PORT}
+EXPOSE ${PORT}
 
 ENTRYPOINT ["dotnet", "MinhaApi.dll"]
